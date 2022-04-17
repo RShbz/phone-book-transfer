@@ -1,7 +1,5 @@
 package com.contactphone.entity;
 
-import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -37,6 +35,7 @@ public class Contact implements java.io.Serializable{
 	 * 
 	 */
 	public Contact() {
+		
 	}
 
 	/**
