@@ -47,9 +47,6 @@ public class StandartContactService implements ContactService {
 
 		var existContact = contactRepository.findByNameAndLastName(request.getName(), request.getLastName());
 
-		//var existphone= contactRepository.findByPhoneContaining(request.getPhone());
-		
-		
 		if (!existContact.isEmpty()) {
 
 			var existPhone = existContact.get().getPhone().stream().map(p -> {

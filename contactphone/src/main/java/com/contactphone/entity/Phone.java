@@ -45,7 +45,9 @@ public class Phone implements java.io.Serializable{
 	 * 
 	 */
 	public Phone() {
+	
 	}
+	
 
 
 	/**

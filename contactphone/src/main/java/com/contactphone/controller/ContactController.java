@@ -19,6 +19,8 @@ import com.contactphone.dto.response.AddContactResponse;
 import com.contactphone.dto.response.getContactResponse;
 import com.contactphone.service.ContactService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 /**
  * @author Remzi ŞAHBAZ
  *
@@ -29,7 +31,10 @@ import com.contactphone.service.ContactService;
 @RequestMapping("/contacts")
 @CrossOrigin
 @Validated
+
+@Tag(name = "Contact")
 public class ContactController {
+	
 	@Autowired
 	private ContactService contactService;
 
@@ -37,6 +42,7 @@ public class ContactController {
 		this.contactService = contactService;
 	}
 
+	
 	@PostMapping
 	public Optional<AddContactResponse> HireContact(@RequestBody AddContactRequest request) {
 		Objects.nonNull(request);
